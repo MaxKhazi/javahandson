@@ -37,7 +37,16 @@ public class calculator {
 			
 			
 	}
-	
+	System.out.println("Do you want to re-use the calculator? If yes click 1 or any other key to exit");
+	int q = sc.nextInt();
+	if(q==1) {
+		main(null);
+	}
+	else {
+		System.out.println("Thank you for using the calculator :)");
+		System.out.println("************************************************");
+		System.exit(0);
+	}
 
 	}
 
