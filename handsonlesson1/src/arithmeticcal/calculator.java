@@ -5,30 +5,31 @@ public class calculator {
 
 	public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
+	AO aa = new AO();
 	System.out.println("**********************Arithmetic Calculator****************************");
 	double result=0;
-	System.out.println("Enter value 1 ");
+	System.out.println("Enter first value");
 	double a = sc.nextDouble();
-	System.out.println("Enter value 2");
+	System.out.println("Enter second value");
 	double b = sc.nextDouble();
 	System.out.println("Select any operation: ");
 	System.out.println(" 1. Addtion\n 2.Subtraction\n 3.Division\n 4.Multiplication\n");
 	int o = sc.nextInt();
 	switch(o){
 		case 1 : 
-			result = a+b;
+			result=aa.ad(a,b);
 			System.out.println("Addition of 2 numbers "+result);
 			break;
 		case 2 : 
-			result = a-b;
+			result =aa.su(a,b);
 			System.out.println("Subtraction of 2 numbers "+result);
 			break;	
 		case 3 : 
-			result = a/b;
+			result =aa.di(a,b);
 			System.out.println("Division of 2 numbers "+result);
 			break;
 		case 4 : 
-			result = a*b;
+			result =aa.mul(a,b);
 			System.out.println("Multiplication of 2 numbers "+result);
 			break;	
 		default:
@@ -37,7 +38,7 @@ public class calculator {
 			
 			
 	}
-	System.out.println("Do you want to re-use the calculator? If yes click 1 or any other key to exit");
+	System.out.println("Do you want to re-use the calculator? If yes click 1 or any other number to exit");
 	int q = sc.nextInt();
 	if(q==1) {
 		main(null);
@@ -50,4 +51,19 @@ public class calculator {
 
 	}
 
+}
+class AO{
+	public double ad(double a, double b) {
+		return a+b;
+	}
+	public double su(double a, double b) {
+		return a-b;
+	}
+	public double mul(double a, double b) {
+		return a*b;
+	}
+	public double di(double a, double b) {
+		return a/b;
+	}
+	
 }
